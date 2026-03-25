@@ -243,7 +243,7 @@ with st.sidebar:
 
     # Dataset upload
     st.markdown("**📂 Dataset**")
-    csv_file = st.file_uploader("Upload TSLA.csv", type=["csv"], key="csv")
+    csv_file = st.file_uploader("Upload TSLA.csv", type=["csv","xlsx"], key="csv")
 
     st.markdown("<hr class='divider'>", unsafe_allow_html=True)
 
@@ -306,7 +306,10 @@ if run_btn:
 
     # ── Load data ─────────────────────────────────────────────────────────────
     with st.spinner("Loading data..."):
-        df = pd.read_csv(csv_file)
+        if csv_file.name.endswith('.csv'):
+            df = pd.read_csv(csv_file)
+       else:
+            df = pd.read_excel(csv_file)
         df['Date'] = pd.to_datetime(df['Date'])
         df.set_index('Date', inplace=True)
         df.sort_index(inplace=True)
