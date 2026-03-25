@@ -307,9 +307,9 @@ if run_btn:
     # ── Load data ─────────────────────────────────────────────────────────────
     with st.spinner("Loading data..."):
         if csv_file.name.endswith('.csv'):
-           df = pd.read_csv(csv_file)
-       else:
-           df = pd.read_excel(csv_file)
+            df = pd.read_csv(csv_file)
+        else:
+            df = pd.read_excel(csv_file)
         df['Date'] = pd.to_datetime(df['Date'])
         df.set_index('Date', inplace=True)
         df.sort_index(inplace=True)
