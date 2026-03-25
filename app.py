@@ -17,6 +17,17 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
+st.markdown(
+    """
+    <style>
+    body {
+        color: white;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # ── Custom CSS ────────────────────────────────────────────────────────────────
 st.markdown("""
 <style>
