@@ -20,7 +20,7 @@ A live interactive **Streamlit app** allows users to upload models and visualize
 
 ## 🌐 Live Demo
 
-👉 **[Open Streamlit App](https://tesla-stock-prediction-wesjc6bpmy8day8ubsg79e.streamlit.app/)**
+👉 **[Open Streamlit App](https://tesla-stock-prediction-rj.streamlit.app/)**
 
 Upload your model files and explore predictions interactively.
 
