@@ -8,6 +8,15 @@ import matplotlib.dates as mdates
 import joblib
 import math
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
+import streamlit as st
+import time
+
+# Add anywhere in your app
+st.cache_data(ttl=3600)
+def keep_alive():
+    return time.time()
+
+keep_alive()
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
